@@ -35,5 +35,9 @@ class Streaming {
         System.out.println(trades.stream().allMatch(pred));  // true
         System.out.println(trades.stream().noneMatch(pred)); // false
         System.out.println(srat.anyMatch(pred));  // infinite stream check
+
+        // Filtering the stream and printing elements that start with 'b'
+        Stream<String> cars = Stream.of("mercede", "bmw", "gle");
+        cars.filter(x -> x.startsWith("b")).forEach(System.out::println);
     }
 }
